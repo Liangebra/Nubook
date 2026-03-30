@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 全局主题：微信扁平化风格，无阴影 -->
+<resources>
+    <style name="Theme.NuBook" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/lake_cyan</item>
+        <item name="colorPrimaryVariant">@color/lake_cyan</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/mint_green</item>
+        <item name="android:windowBackground">@color/bg_page</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- 全面禁止阴影 -->
+        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <!-- 扁平按钮样式：无阴影、适度方角 -->
+    <style name="FlatButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="cornerRadius">6dp</item>
+    </style>
+
+    <!-- 扁平文本按钮 -->
+    <style name="FlatTextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+</resources>

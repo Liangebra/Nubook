@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 顶栏与金额显示区 (使用更加灵活的权重或固定高度防止遮挡) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <!-- 关闭按钮 -->
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:padding="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 收入/支出切换 -->
+        <LinearLayout
+            android:id="@+id/layout_type_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_close"
+            app:layout_constraintBottom_toBottomOf="@id/btn_close">
+
+            <TextView
+                android:id="@+id/btn_expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支出"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:id="@+id/btn_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收入"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/indicator_expense"
+            android:layout_width="20dp"
+            android:layout_height="2.5dp"
+            android:background="@color/expense_color"
+            app:layout_constraintTop_toBottomOf="@id/layout_type_toggle"
+            app:layout_constraintStart_toStartOf="@id/layout_type_toggle"
+            android:layout_marginStart="16dp" />
+
+        <View
+            android:id="@+id/indicator_income"
+            android:layout_width="20dp"
+            android:layout_height="2.5dp"
+            android:background="@color/income_color"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/layout_type_toggle"
+            app:layout_constraintEnd_toEndOf="@id/layout_type_toggle"
+            android:layout_marginEnd="16dp" />
+
+        <!-- 表达式与结果展示 (防止过大遮挡) -->
+        <TextView
+            android:id="@+id/tv_expression"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="32sp"
+            android:textColor="@color/text_primary"
+            android:gravity="end"
+            android:maxLines="2"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="16sp"
+            app:autoSizeMaxTextSize="32sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_type_toggle"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="= 0.00"
+            android:textSize="14sp"
+            android:textColor="@color/text_hint"
+            android:gravity="end"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 标签、日期与备注 (固定在键盘上方，确保可见) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_input">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_tag"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="标签"
+                android:textSize="14sp"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/btn_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="今天"
+                android:textSize="13sp"
+                android:paddingStart="8dp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="4dp"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="0.5dp" android:background="#EEEEEE" />
+
+        <EditText
+            android:id="@+id/et_note"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:hint="添加备注..."
+            android:textSize="14sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:maxLines="1"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <!-- 计算器键盘 (固定在底部) -->
+    <GridLayout
+        android:id="@+id/calculator_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:background="#E8E8E8"
+        android:paddingTop="0.5dp">
+
+        <TextView android:id="@+id/btn_clear" style="@style/CalcOpButton" android:text="AC"/>
+        <TextView android:id="@+id/btn_left_bracket" style="@style/CalcOpButton" android:text="("/>
+        <TextView android:id="@+id/btn_right_bracket" style="@style/CalcOpButton" android:text=")"/>
+        <TextView android:id="@+id/btn_divide" style="@style/CalcOpButton" android:text="÷"/>
+
+        <TextView android:id="@+id/btn_7" style="@style/CalcNumButton" android:text="7"/>
+        <TextView android:id="@+id/btn_8" style="@style/CalcNumButton" android:text="8"/>
+        <TextView android:id="@+id/btn_9" style="@style/CalcNumButton" android:text="9"/>
+        <TextView android:id="@+id/btn_multiply" style="@style/CalcOpButton" android:text="×"/>
+
+        <TextView android:id="@+id/btn_4" style="@style/CalcNumButton" android:text="4"/>
+        <TextView android:id="@+id/btn_5" style="@style/CalcNumButton" android:text="5"/>
+        <TextView android:id="@+id/btn_6" style="@style/CalcNumButton" android:text="6"/>
+        <TextView android:id="@+id/btn_minus" style="@style/CalcOpButton" android:text="-"/>
+
+        <TextView android:id="@+id/btn_1" style="@style/CalcNumButton" android:text="1"/>
+        <TextView android:id="@+id/btn_2" style="@style/CalcNumButton" android:text="2"/>
+        <TextView android:id="@+id/btn_3" style="@style/CalcNumButton" android:text="3"/>
+        <TextView android:id="@+id/btn_plus" style="@style/CalcOpButton" android:text="+"/>
+
+        <TextView android:id="@+id/btn_dot" style="@style/CalcNumButton" android:text="."/>
+        <TextView android:id="@+id/btn_0" style="@style/CalcNumButton" android:text="0"/>
+        <TextView android:id="@+id/btn_backspace" style="@style/CalcNumButton" android:text="退"/>
+        <TextView
+            android:id="@+id/btn_done"
+            style="@style/CalcDoneButton"
+            android:text="完成"
+            android:layout_width="0dp"
+            android:layout_gravity="fill" />
+    </GridLayout>
+
+</LinearLayout>

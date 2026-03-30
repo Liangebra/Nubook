@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 圆角对话框背景 (radius=12dp, 灰色边框) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/white" />
+    <corners android:radius="12dp" />
+    <stroke
+        android:width="1dp"
+        android:color="#E0E0E0" />
+</shape>

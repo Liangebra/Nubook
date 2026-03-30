@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FileProvider 路径配置 -->
+<paths>
+    <files-path name="exports" path="exports/" />
+    <external-path name="documents" path="Documents/NuBook/" />
+</paths>
