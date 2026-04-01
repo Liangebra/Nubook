@@ -10,7 +10,9 @@ A modern minimalist Android accounting application developed based on Clean Arch
 </div>
 
 <div align="center">
+    
 [中文](README.zh.md) | English | [日本語](README.ja.md)
+
 </div>
 
 ## Direct App Download Experience
