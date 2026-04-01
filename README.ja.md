@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./design_assets/icon.png" width="50" height="50" alt="软件图标">
+
 # NuBook ミニマリスト家計簿
 
 Clean Architecture と MVVM アーキテクチャに基づいて開発された、モダンでミニマルな Android 家計簿アプリケーション
