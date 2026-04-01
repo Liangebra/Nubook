@@ -13,7 +13,7 @@ A modern minimalist Android accounting application developed based on Clean Arch
 
 <div align="center">
     
-[中文](README.zh.md) | English | [日本語](README.ja.md)
+[中文](README.md) | English | [日本語](README.ja.md)
 
 </div>
 
