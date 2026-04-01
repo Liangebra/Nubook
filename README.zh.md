@@ -17,7 +17,7 @@
 
 ## APP 直接下载体验
 
-<table style="margin-left: auto; margin-right: auto;">
+<table align="center">
   <tr>
     <td align="center"><img src="./design_assets/picture/picture1.jpg" width="200"><br>主页页面</td>
     <td align="center"><img src="./design_assets/picture/picture2.jpg" width="200"><br>账本创建</td>
@@ -33,7 +33,7 @@
 
 ### 1. 绝对的数据主权与多层容错导入
 
-<table style="margin-left: auto; margin-right: auto;">
+<table align="center">
   <tr>
     <td align="center"><img src="./design_assets/picture/picture8.jpg" width="200"><br>账目防误删</td>
     <td align="center"><img src="./design_assets/picture/picture9.jpg" width="200"><br>导入导出支持</td>
@@ -48,7 +48,7 @@
 
 ### 2. 即时代数解析，告别弹窗计算器
 
-<table style="margin-left: auto; margin-right: auto;">
+<table align="center">
   <tr>
     <td align="center"><img src="./design_assets/picture/picture4.jpg" width="200"><br>输入账目</td>
     <td align="center"><img src="./design_assets/picture/picture5.jpg" width="200"><br>账目时间选择</td>
@@ -61,7 +61,7 @@
 
 ### 3. 深度的像素级主题自适应，告别模板化
 
-<table style="margin-left: auto; margin-right: auto;">
+<table align="center">
   <tr>
     <td align="center"><img src="./design_assets/picture/picture11.jpg" width="200"><br>多种色彩选择</td>
     <td align="center"><img src="./design_assets/picture/picture12.jpg" width="200"><br>颜色改变示例</td>
