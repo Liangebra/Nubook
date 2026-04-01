@@ -64,7 +64,7 @@
 <table>
   <tr>
     <td align="center"><img src="./design_assets/picture/picture11.jpg" width="200"><br>多种色彩选择</td>
-    <td align="center"><img src="./design_assets/picture/picture13.jpg" width="200"><br>颜色改变示例</td>
+    <td align="center"><img src="./design_assets/picture/picture12.jpg" width="200"><br>颜色改变示例</td>
     <td align="center"><img src="./design_assets/picture/picture6.jpg" width="200"><br>彩色统计图表</td>
   </tr>
 </table>
