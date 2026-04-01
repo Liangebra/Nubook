@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./design_assets/icon.png" width="50" height="50" alt="软件图标">
+
 # NuBook 极简记账本
 
 基于 Clean Architecture 与 MVVM 架构开发的现代化极简 Android 记账应用
