@@ -17,6 +17,14 @@
 
 ## APP 直接下载体验
 
+<table>
+  <tr>
+    <td align="center"><img src=".\picture\picture1.png" width="200"><br>主页页面</td>
+    <td align="center"><img src=".\picture\picture2.png" width="200"><br>账本创建</td>
+    <td align="center"><img src=".\picture\picture3.png" width="200"><br>账本页面</td>
+  </tr>
+</table>
+
 你可以直接在当前 GitHub 仓库右侧的 **[Releases]** 面板中下载最新编译发布的 `NuBook_v2.1.0_universal.apk` 安装包。将 APK 下载到手机后可直接免配置安装体验。
 
 ## 为什么选择 NuBook？(对比市面主流记账应用)
@@ -24,14 +32,43 @@
 市面上的记账软件往往越来越臃肿，充斥着广告、社交圈子以及强制的云同步限制。对于仅仅只想记录个人理财流水的人来说，NuBook 在四个核心维度上做到了极致的减法与底层革命：
 
 ### 1. 绝对的数据主权与多层容错导入
+
+<table>
+  <tr>
+    <td align="center"><img src=".\picture\picture8.png" width="200"><br>账目防误删</td>
+    <td align="center"><img src=".\picture\picture9.png" width="200"><br>导入导出支持</td>
+    <td align="center"><img src=".\picture\picture10.png" width="200"><br>直接寻找可导入文件</td>
+  </tr>
+</table>
+
 *   **市面竞品痛点**：数据被绑架。许多应用将账本加密在应用沙盒内，导出为难以解析的特殊格式文件，甚至将“导出 Excel/CSV”包装为必须要内购付费解锁的 VIP 功能。
 *   **NuBook 的颠覆**：数据 100% 自由化流转。只需一点，你可以瞬间生成 JSON 抽象树字典、JSONL 逐行或人类可读的标准 CSV 表格，并直接保存在系统公开可见的 `Documents/NuBook` 目录下。最强大的是我们在导入模块植入了**三阶智能探测系统**——情景举例：你完全可以在电脑把导出的 CSV 随手乱改字段、或者用记事本混合 JSON 塞在一块传回手机，系统引擎会自动屏蔽损毁的烂行，强行提取出规范数据写入 Room 数据库进行还原操作。
 
+
+
 ### 2. 即时代数解析，告别弹窗计算器
+
+<table>
+  <tr>
+    <td align="center"><img src=".\picture\picture4.png" width="200"><br>输入账目</td>
+    <td align="center"><img src=".\picture\picture5.png" width="200"><br>账目时间选择</td>
+    <td align="center"><img src=".\picture\picture7.png" width="200"><br>任意账目计算</td>
+  </tr>
+</table>
+
 *   **市面竞品痛点**：记下“买菜38元加两瓶水4元还要减去超市退的2元”，必须单独弹出一个小键盘计算器算半天，再把几十位的结果强行搬移或者点击确认输入。
 *   **NuBook 的颠覆**：记账输入完全不局限于冰冷的数字。底层的输入层桥接了强大的 `mXparser` 库。情景举例：当你的脑海里呈现上述金额片段时，你只需要在输入框狂放地敲入 `38+(2*2)-2`，系统底层会实时剥离将其转为抽象语法树 (AST) 解析出浮点结果落盘。体验属于极客的高级数字录入爽感。
 
 ### 3. 深度的像素级主题自适应，告别模板化
+
+<table>
+  <tr>
+    <td align="center"><img src=".\picture\picture11.png" width="200"><br>多种色彩选择</td>
+    <td align="center"><img src=".\picture\picture13.png" width="200"><br>颜色改变示例</td>
+    <td align="center"><img src=".\picture\picture6.png" width="200"><br>彩色统计图表</td>
+  </tr>
+</table>
+
 *   **市面竞品痛点**：界面提供干瘪的“白天模式/黑夜模式”，或者必须花钱买皮肤。即便换了皮肤也存在大量的未适配边角和厚重的立体阴影。
 *   **NuBook 的颠覆**：采用极致扁平化哲学（全应用封杀卡片 Z 轴阴影，全局 `elevation="0dp"`），再辅以全局底层渗透的 `ColorEngine` 引擎。你选定一种颜色为主轴调子，系统会通过底层生命周期劫持，让底部系统横栏的三个图标、账单列表里每一条记录左侧的柔和遮罩带、甚至于统计图表上的圆环配比占比扇形，统统像素级地重装为该主色调。让你拥有无缝融合的沉浸美学归属。
 
