@@ -19,9 +19,9 @@
 
 <table>
   <tr>
-    <td align="center"><img src="./design_assets/picture/picture1.png" width="200"><br>主页页面</td>
-    <td align="center"><img src="./design_assets/picture/picture2.png" width="200"><br>账本创建</td>
-    <td align="center"><img src="./design_assets/picture/picture3.png" width="200"><br>账本页面</td>
+    <td align="center"><img src="./design_assets/picture/picture1.jpg" width="200"><br>主页页面</td>
+    <td align="center"><img src="./design_assets/picture/picture2.jpg" width="200"><br>账本创建</td>
+    <td align="center"><img src="./design_assets/picture/picture3.jpg" width="200"><br>账本页面</td>
   </tr>
 </table>
 
@@ -35,9 +35,9 @@
 
 <table>
   <tr>
-    <td align="center"><img src="./design_assets/picture/picture8.png" width="200"><br>账目防误删</td>
-    <td align="center"><img src="./design_assets/picture/picture9.png" width="200"><br>导入导出支持</td>
-    <td align="center"><img src="./design_assets/picture/picture10.png" width="200"><br>直接寻找可导入文件</td>
+    <td align="center"><img src="./design_assets/picture/picture8.jpg" width="200"><br>账目防误删</td>
+    <td align="center"><img src="./design_assets/picture/picture9.jpg" width="200"><br>导入导出支持</td>
+    <td align="center"><img src="./design_assets/picture/picture10.jpg" width="200"><br>直接寻找可导入文件</td>
   </tr>
 </table>
 
@@ -50,9 +50,9 @@
 
 <table>
   <tr>
-    <td align="center"><img src="./design_assets/picture/picture4.png" width="200"><br>输入账目</td>
-    <td align="center"><img src="./design_assets/picture/picture5.png" width="200"><br>账目时间选择</td>
-    <td align="center"><img src="./design_assets/picture/picture7.png" width="200"><br>任意账目计算</td>
+    <td align="center"><img src="./design_assets/picture/picture4.jpg" width="200"><br>输入账目</td>
+    <td align="center"><img src="./design_assets/picture/picture5.jpg" width="200"><br>账目时间选择</td>
+    <td align="center"><img src="./design_assets/picture/picture7.jpg" width="200"><br>任意账目计算</td>
   </tr>
 </table>
 
@@ -63,9 +63,9 @@
 
 <table>
   <tr>
-    <td align="center"><img src="./design_assets/picture/picture11.png" width="200"><br>多种色彩选择</td>
-    <td align="center"><img src="./design_assets/picture/picture13.png" width="200"><br>颜色改变示例</td>
-    <td align="center"><img src="./design_assets/picture/picture6.png" width="200"><br>彩色统计图表</td>
+    <td align="center"><img src="./design_assets/picture/picture11.jpg" width="200"><br>多种色彩选择</td>
+    <td align="center"><img src="./design_assets/picture/picture13.jpg" width="200"><br>颜色改变示例</td>
+    <td align="center"><img src="./design_assets/picture/picture6.jpg" width="200"><br>彩色统计图表</td>
   </tr>
 </table>
 
