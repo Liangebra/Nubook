@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="./design_assets/icon.png" width="38" height="38" alt="软件图标">
+<img src="./design_assets/icon.png" width="48" height="48" alt="软件图标">
 
 # NuBook Minimalist Ledger
 
