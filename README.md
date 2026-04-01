@@ -1,77 +1,81 @@
+
+
 <div align="center">
 
-# NuBook 极简记账本
+# NuBook Minimalist Ledger
 
-基于 Clean Architecture 与 MVVM 架构开发的现代化极简 Android 记账应用
+A modern minimalist Android accounting application developed based on Clean Architecture and MVVM architecture.
 
 ---
 </div>
 
-## APP 直接下载体验
+[中文](README.zh.md) | English | [日本語](README.ja.md)
 
-你可以直接在当前 GitHub 仓库右侧的 **[Releases]** 面板中下载最新编译发布的 `NuBook_v2.1.0_universal.apk` 安装包。将 APK 下载到手机后可直接免配置安装体验。
+## Direct App Download Experience
 
-## 为什么选择 NuBook？(对比市面主流记账应用)
+You can directly download the latest compiled and released `NuBook_v2.1.0_universal.apk` installation package from the **[Releases]** panel on the right side of this GitHub repository. Download the APK to your phone and install it directly without any configuration to experience it.
 
-市面上的记账软件往往越来越臃肿，充斥着广告、社交圈子以及强制的云同步限制。对于仅仅只想记录个人理财流水的人来说，NuBook 在四个核心维度上做到了极致的减法与底层革命：
+## Why Choose NuBook? (Comparison with Mainstream Accounting Apps)
 
-### 1. 绝对的数据主权与多层容错导入
-*   **市面竞品痛点**：数据被绑架。许多应用将账本加密在应用沙盒内，导出为难以解析的特殊格式文件，甚至将“导出 Excel/CSV”包装为必须要内购付费解锁的 VIP 功能。
-*   **NuBook 的颠覆**：数据 100% 自由化流转。只需一点，你可以瞬间生成 JSON 抽象树字典、JSONL 逐行或人类可读的标准 CSV 表格，并直接保存在系统公开可见的 `Documents/NuBook` 目录下。最强大的是我们在导入模块植入了**三阶智能探测系统**——情景举例：你完全可以在电脑把导出的 CSV 随手乱改字段、或者用记事本混合 JSON 塞在一块传回手机，系统引擎会自动屏蔽损毁的烂行，强行提取出规范数据写入 Room 数据库进行还原操作。
+Accounting software on the market often becomes increasingly bloated, filled with advertisements, social circles, and mandatory cloud sync restrictions. For those who simply want to record personal financial transactions, NuBook achieves extreme simplification and fundamental innovation across four core dimensions:
 
-### 2. 即时代数解析，告别弹窗计算器
-*   **市面竞品痛点**：记下“买菜38元加两瓶水4元还要减去超市退的2元”，必须单独弹出一个小键盘计算器算半天，再把几十位的结果强行搬移或者点击确认输入。
-*   **NuBook 的颠覆**：记账输入完全不局限于冰冷的数字。底层的输入层桥接了强大的 `mXparser` 库。情景举例：当你的脑海里呈现上述金额片段时，你只需要在输入框狂放地敲入 `38+(2*2)-2`，系统底层会实时剥离将其转为抽象语法树 (AST) 解析出浮点结果落盘。体验属于极客的高级数字录入爽感。
+### 1. Absolute Data Sovereignty & Multi-Layer Fault-Tolerant Import
+*   **Pain Points of Competitors**: Data hostage. Many applications encrypt ledgers within the app sandbox, export them into hard-to-parse proprietary formats, or even package "Export to Excel/CSV" as a paid VIP feature.
+*   **NuBook's Disruption**: 100% free flow of data. With just one click, you can instantly generate JSON abstract tree dictionaries, JSONL line-by-line formats, or human-readable standard CSV tables, all saved directly in the system-public `Documents/NuBook` directory. Most powerfully, we have implemented a **Three-Stage Intelligent Detection System** within the import module. Scenario example: You can arbitrarily modify fields in the exported CSV on your computer, or mix in JSON fragments using Notepad and transfer them back to your phone. The system engine will automatically filter out corrupted or invalid rows and forcibly extract standard data to write into the Room database for restoration.
 
-### 3. 深度的像素级主题自适应，告别模板化
-*   **市面竞品痛点**：界面提供干瘪的“白天模式/黑夜模式”，或者必须花钱买皮肤。即便换了皮肤也存在大量的未适配边角和厚重的立体阴影。
-*   **NuBook 的颠覆**：采用极致扁平化哲学（全应用封杀卡片 Z 轴阴影，全局 `elevation="0dp"`），再辅以全局底层渗透的 `ColorEngine` 引擎。你选定一种颜色为主轴调子，系统会通过底层生命周期劫持，让底部系统横栏的三个图标、账单列表里每一条记录左侧的柔和遮罩带、甚至于统计图表上的圆环配比占比扇形，统统像素级地重装为该主色调。让你拥有无缝融合的沉浸美学归属。
+### 2. Real-time Algebraic Parsing, Say Goodbye to Popup Calculators
+*   **Pain Points of Competitors**: To record "groceries $38, plus two bottles of water for $4, minus a $2 store refund," you have to open a separate calculator, calculate, and then move or enter the result manually.
+*   **NuBook's Disruption**: Input is not limited to just numbers. The underlying input layer integrates the powerful `mXparser` library. Scenario example: When the above amount fragments come to mind, you can simply type `38+(2*2)-2` freely in the input field. The system will parse it in real-time, stripping it into an Abstract Syntax Tree (AST), resolving the floating-point result, and storing it. Experience the pleasure of advanced digital entry for geeks.
 
-### 4. 数据防火墙：真空运行环境
-*   **市面竞品痛点**：注册即需要填手机号，后台常驻各种唤醒服务强行推销理财产品课，甚至读取你的位置、相册信息。
-*   **NuBook 的颠覆**：绝对的 0 打扰与真空运行机制。我们不仅完全抛弃了后台常驻系统与闹钟唤醒（AlarmManager），更是在应用的底层配置表 `AndroidManifest.xml` 中没有申请哪怕一行联网（INTERNET）权限。没有了联网底座，NuBook 只能、且只会安分地与本地构建的 SQLite (Room) 进行交接。没有社交，没有开屏，这里仅仅只是记录数字。
+### 3. Deep Pixel-Level Theme Adaptation, Say Goodbye to Templates
+*   **Pain Points of Competitors**: Interfaces offer a dry "Light Mode/Dark Mode" or require purchasing skins. Even with skins, there are often many unadapted corners and heavy drop shadows.
+*   **NuBook's Disruption**: Embraces an ultra-flat design philosophy (banishing card elevation shadows across the app, with global `elevation="0dp"`), complemented by a globally embedded `ColorEngine`. Once you select a color as the primary theme, the system will, through underlying lifecycle hooks, meticulously recolor elements like the three icons on the system navigation bar, the subtle mask strip on the left of each entry in the bill list, and even the sector proportions on the statistical pie charts—all rendered in that main color pixel by pixel. This provides a seamlessly integrated immersive aesthetic.
 
-## 技术栈与架构 (Tech Stack & Architecture)
+### 4. Data Firewall: Vacuum Runtime Environment
+*   **Pain Points of Competitors**: Registration requires a phone number; background services frequently wake up to push financial product courses or even access your location and photo gallery.
+*   **NuBook's Disruption**: Absolute zero disruption and a vacuum operation mechanism. We have not only completely abandoned background daemons and alarm wake-ups (AlarmManager) but also have not requested even a single line of internet (INTERNET) permission in the application's underlying configuration file, `AndroidManifest.xml`. Without an internet connection base, NuBook can only, and will only, interact securely with the local SQLite (Room) database. No social features, no splash screens; this is simply a place for recording numbers.
 
-本项目遵循 Android 官方推荐最新的开发架构规范：
-- 开发语言：Kotlin 1.9+
-- 异步框架：Kotlin Coroutines + Flow
-- 生命周期：Jetpack Lifecycle, ViewModel, LiveData
-- 数据持久化：Jetpack Room
-- UI 组件库：Material Components for Android (轻度定制版)
-- 图表绘制：MPAndroidChart (去阴影柔和色填充化)
-- 依赖管理 / 编译引擎：Gradle (KTS) / AGP 8.2.2
+## Tech Stack & Architecture
 
-## 项目结构指南
+This project follows the latest Android development architecture standards recommended by Google:
+- Language: Kotlin 1.9+
+- Asynchronous Framework: Kotlin Coroutines + Flow
+- Lifecycle Components: Jetpack Lifecycle, ViewModel, LiveData
+- Persistence: Jetpack Room
+- UI Component Library: Material Components for Android (lightly customized)
+- Charting: MPAndroidChart (shadow removal with soft color fills)
+- Dependency Management / Build Engine: Gradle (KTS) / AGP 8.2.2
+
+## Project Structure Guide
 
 ```text
 com.nubook/
-├── NuBookApplication.kt  # 全局应用入口声明
+├── NuBookApplication.kt  # Global application entry declaration
 ├── data/
-│   ├── export/       # 三阶智能数据导入与多协议导出解析引擎
-│   └── local/        # Room Database，Entity 表结构实体与 Dao 检索接口
+│   ├── export/       # Three-stage intelligent data import & multi-protocol export parsing engine
+│   └── local/        # Room Database, Entity table structures, and Dao retrieval interfaces
 ├── domain/           
-│   └── usecase/      # 干净的业务层处理单元（如核心计算、筛选、统计过滤等用例）
+│   └── usecase/      # Clean business logic processing units (e.g., core calculation, filtering, statistics use cases)
 └── ui/
-    ├── base/         # 深层 BaseActivity (提供主题级重载引擎)
-    ├── home/         # 首页聚合面板与多账单瀑布流
-    ├── input/        # 记账流录入界面与 mXparser 数学算法桥接
-    ├── ledger/       # 单个特定账本的具体详细流水历史
-    ├── search/       # 基于流的全局关键词实时过滤
-    ├── settings/     # 颜色引擎切换主入口
-    ├── statistics/   # MPAndroidChart 图表呈现逻辑
-    └── theme/        # ColorEngine 核心自主渲染器
+    ├── base/         # BaseActivity (provides theme-level override engine)
+    ├── home/         # Home aggregation panel and multi-bill feed
+    ├── input/        # Accounting entry interface and mXparser math algorithm bridge
+    ├── ledger/       # Detailed transaction history for a specific ledger
+    ├── search/       # Flow-based global keyword real-time filtering
+    ├── settings/     # Main entry for color engine switching
+    ├── statistics/   # MPAndroidChart presentation logic
+    └── theme/        # Core renderer for the ColorEngine
 ```
+## Build & Run
+Environment Requirements: JDK 17+, Android Studio Iguana / Jellyfish (or later).
 
-## 编译与运行 (Build & Run)
+Clone this repository, download the ZIP, or pull it locally.
 
-环境要求：JDK 17+, Android Studio Iguana / Jellyfish (或以上版本)。
+Open the project in Android Studio.
 
-1. 将本仓库克隆、下载 ZIP 或者拉取至本地。
-2. 使用 Android Studio 打开该项目。
-3. 如果未配置 Android SDK，会在 `local.properties` 文件生成所需配置。
-4. 等待 Gradle Sync 完成解析依赖库后，点击 Run 'app' （绿三角）即可编译并在真机或模拟器中运行 (对应 Android API >= 24)。
+If the Android SDK is not configured, the necessary configuration will be generated in the local.properties file.
 
-## 证书与开源协议
+Wait for Gradle Sync to finish resolving dependencies, then click Run 'app' (the green triangle) to compile and run on a physical device or emulator (requires Android API >= 24).
 
-本项目开源，遵守 MIT License。你可以自由使用和探索本项目的源码进行进一步开发和二次修改。
+## License & Open Source
+This project is open source and complies with the MIT License. You are free to use and explore the source code for further development and modification.
