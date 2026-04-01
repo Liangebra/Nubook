@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![软件图标](./design/icon.png)
+![软件图标](https://github.com/Liangebra/Nubook/blob/main/design_assets/icon.png)
 
 # NuBook Minimalist Ledger
 
