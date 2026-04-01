@@ -2,6 +2,8 @@
 
 <div align="center">
 
+![软件图标](./design/icon.png)
+
 # NuBook Minimalist Ledger
 
 A modern minimalist Android accounting application developed based on Clean Architecture and MVVM architecture.
